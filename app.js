@@ -16,15 +16,15 @@ $(document).ready(function() {
         localStorage.setItem(value, time);
     });
 
-    $('.description #hour9').val(localStorage.getItem('hour9'));
-    $('.description #hour10').val(localStorage.getItem('hour10'));
-    $('.description #hour11').val(localStorage.getItem('hour11'));
-    $('.description #hour12').val(localStorage.getItem('hour12'));
-    $('.description #hour13').val(localStorage.getItem('hour13'));
-    $('.description #hour14').val(localStorage.getItem('hour14'));
-    $('.description #hour15').val(localStorage.getItem('hour15'));
-    $('.description #hour16').val(localStorage.getItem('hour16'));
-    $('.description #hour17').val(localStorage.getItem('hour17'));// load saved data from localStorage
+    $('#hour9 .description').val(localStorage.getItem('hour9'));
+    $('#hour10 .description').val(localStorage.getItem('hour10'));
+    $('#hour11 .description').val(localStorage.getItem('hour11'));
+    $('#hour12 .description').val(localStorage.getItem('hour12'));
+    $('#hour13 .description').val(localStorage.getItem('hour13'));
+    $('#hour14 .description').val(localStorage.getItem('hour14'));
+    $('#hour15 .description').val(localStorage.getItem('hour15'));
+    $('#hour16 .description').val(localStorage.getItem('hour16'));
+    $('#hour17 .description').val(localStorage.getItem('hour17'));// load saved data from localStorage
 
     function hourUpdater () {
         var currentHour= moment().hours();
@@ -49,8 +49,9 @@ $(document).ready(function() {
             $(this).addClass("future");
         }
 
-    hourUpdater(); //re-run function
+  
         });
     };
+    hourUpdater(); //re-run function
 })
 
